@@ -13,7 +13,9 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Various Command-Line Tools
 - Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
 - Wireshark (Protocol Analyzer)
-
+<p align="center">
+<img src="[Wireshark](https://user-images.githubusercontent.com/128350155/227862713-4cdaa254-1cfe-4320-9fb8-09b0c1aff472.jpg" />
+<p/>
 <h2>Operating Systems Used </h2>
 
 - Windows 10 (21H2)
@@ -79,4 +81,4 @@ For more info search for - Azure Network Security Group microsoft docs
   - Answer: because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
   
   - Finish
-![Wireshark](https://user-images.githubusercontent.com/128350155/227862713-4cdaa254-1cfe-4320-9fb8-09b0c1aff472.jpg)
+([Wireshark](https://user-images.githubusercontent.com/128350155/227862713-4cdaa254-1cfe-4320-9fb8-09b0c1aff472.jpg)
