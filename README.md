@@ -80,5 +80,3 @@ For more info search for - Azure Network Security Group microsoft docs
   - Oserve the immediate non-stop spam of traffic? Why do you think it’s non-stop spamming vs only showing traffic when you do an activity?
   - Answer: because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
   
-  - Finish
-([Wireshark](https://user-images.githubusercontent.com/128350155/227862713-4cdaa254-1cfe-4320-9fb8-09b0c1aff472.jpg)
