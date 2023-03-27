@@ -54,11 +54,27 @@ For more info search for - Azure Network Security Group microsoft docs
   - Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working)
   - Stop the ping activity
 
-- Part 2 (Observe SSH Traffic)
+- Part 3 (Observe SSH Traffic)
   - Back in Wireshark, filter for SSH traffic only (tcp.port == 22)
   - From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address, ssh labuser@privateubuntoIP)
   - Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark (id, uname -a, pwd, ls -lasth, exit)
   - Exit the SSH connection by typing ‘exit’ and pressing [Enter] 
 
-- Part 2 (Observe DHCP Traffic)
-  - 
+- Part 4 (Observe DHCP Traffic)
+  - Back in Wireshark, filter for DHCP traffic only 
+  - From your Windows 10 VM, attempt to issue your VM a new IP address from the command line (ipconfig /renew) 
+  - nslookup www.google.com
+  - Observe the DHCP traffic appearing in WireShark
+
+- Part 5 (Observe DNS Traffic)
+  - Back in Wireshark, filter for DNS traffic only (udp.port == 53)
+  - Powershell - nslookup www.disney.com
+  - From your Windows 10 VM within a command line, use nslookup to see what google.com and disney.com’s IP addresses are
+  - Observe the DNS traffic being show in WireShark
+
+- Part 6 (Observe RDP Traffic)
+  - Back in Wireshark, filter for RDP traffic only (tcp.port == 3389)
+  - Oserve the immediate non-stop spam of traffic? Why do you think it’s non-stop spamming vs only showing traffic when you do an activity?
+  - Answer: because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
+  
+  - Finish
