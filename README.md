@@ -5,6 +5,7 @@
 <h1>Network Security Groups (NSGs) and Inspecting Traffic Between Azure Virtual Machines</h1>
 In this tutorial, we observe various network traffic to and from Azure Virtual Machines with Wireshark as well as experiment with Network Security Groups. <br />
 
+
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -78,3 +79,4 @@ For more info search for - Azure Network Security Group microsoft docs
   - Answer: because the RDP (protocol) is constantly showing you a live stream from one computer to another, therefor traffic is always being transmitted
   
   - Finish
+![Wireshark](https://user-images.githubusercontent.com/128350155/227862713-4cdaa254-1cfe-4320-9fb8-09b0c1aff472.jpg)
