@@ -38,20 +38,25 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
   - Observe Your Virtual Network within Network Watcher
 
 - Part 2 (Observe ICMP Traffic)
-⦁	Use Remote Desktop to connect to your Windows 10 Virtual Machine
-⦁	Within your Windows 10 Virtual Machine, Install Wireshark
-⦁	Open Wireshark and filter for ICMP traffic only (start capturing packets)
-⦁	Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM
-⦁	Observe ping requests and replies within WireShark
-⦁	From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark
-(ping www.google.com -4)
-⦁	Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM (Private IP)
-⦁	Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic
+  - Use Remote Desktop to connect to your Windows 10 Virtual Machine
+  - Within your Windows 10 Virtual Machine, Install Wireshark
+  - Open Wireshark and filter for ICMP traffic only (start capturing packets)
+  - Retrieve the private IP address of the Ubuntu VM and attempt to ping it from within the Windows 10 VM
+  - Observe ping requests and replies within WireShark
+  - From The Windows 10 VM, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark (ping www.google.com -4)
+  - Initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM (Private IP)
+  - Open the Network Security Group your Ubuntu VM is using and disable incoming (inbound) ICMP traffic
 Priority - 200
 Name - DENY_ICMP_PING_FROM_ANYWHERE
 For more info search for - Azure Network Security Group microsoft docs
-⦁	Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity
-⦁	Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is using
-⦁	Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working)
-⦁	Stop the ping activity
+  - Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity
+  - Re-enable ICMP traffic for the Network Security Group your Ubuntu VM is using
+  - Back in the Windows 10 VM, observe the ICMP traffic in WireShark and the command line Ping activity (should start working)
+  - Stop the ping activity
+
+- Part 2 (Observe SSH Traffic)
+  - Back in Wireshark, filter for SSH traffic only (tcp.port == 22)
+  - From your Windows 10 VM, “SSH into” your Ubuntu Virtual Machine (via its private IP address, ssh labuser@privateubuntoIP)
+  - Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark (id, uname -a, pwd, ls -lasth, exit)
+  - Exit the SSH connection by typing ‘exit’ and pressing [Enter] 
 
