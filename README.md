@@ -60,3 +60,5 @@ For more info search for - Azure Network Security Group microsoft docs
   - Type commands (username, pwd, etc) into the linux SSH connection and observe SSH traffic spam in WireShark (id, uname -a, pwd, ls -lasth, exit)
   - Exit the SSH connection by typing ‘exit’ and pressing [Enter] 
 
+- Part 2 (Observe DHCP Traffic)
+  - 
